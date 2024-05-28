@@ -1,0 +1,23 @@
+
+name: Test
+on:
+ push:
+   branches:
+     - main
+
+jobs:
+  build1:
+    defaults:
+      run:
+        working-directory: ./family
+
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: open family folder
+        run: ls ./family
+        
