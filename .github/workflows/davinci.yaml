@@ -1,15 +1,13 @@
 
 name: Test
 on:
- push:
-   branches:
-     - main
+ workflow_dispatch:
 
 jobs:
   build1:
-    # defaults:
-    #   run:
-    #     working-directory: ./family
+    defaults:
+      run:
+        working-directory: ./family
 
     runs-on: ubuntu-latest
 
